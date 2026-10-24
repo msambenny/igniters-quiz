@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Igniters Youth Quiz – Amos TEST (4 Oct 2026)",
+    "date": "2026-10-04",
+    "description": "Test run – 5 questions from the Book of Amos",
+    "time": "20"
+  },
+  "sections": [
+    "Chapters 1, 2",
+    "Chapters 3, 4",
+    "Chapters 5, 6",
+    "Chapters 7, 8, 9"
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "line": 8,
+      "section": "Chapters 1, 2",
+      "type": "quiz",
+      "time": null,
+      "text": "How many years 'before the earthquake' did Amos see visions concerning Israel? (Amos 1:1)",
+      "tamil": null,
+      "answers": [
+        {
+          "letter": "A",
+          "text": "1 year",
+          "english": "1 year",
+          "tamil": null,
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "2 years",
+          "english": "2 years",
+          "tamil": null,
+          "correct": true
+        },
+        {
+          "letter": "C",
+          "text": "3 years",
+          "english": "3 years",
+          "tamil": null,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "4 years",
+          "english": "4 years",
+          "tamil": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "line": 16,
+      "section": "Chapters 3, 4",
+      "type": "quiz",
+      "time": null,
+      "text": "Who did God choose/know from all the families of the earth? (Amos 3:2)",
+      "tamil": "எல்லா குடும்பங்களிலும் இருந்து தேவன் யாரை அறிந்துகொண்டார்?",
+      "answers": [
+        {
+          "letter": "A",
+          "text": "Egypt / எகிப்து",
+          "english": "Egypt",
+          "tamil": "எகிப்து",
+          "correct": false
+        },
+        {
+          "letter": "B",
+          "text": "Israel / இஸ்ரவேல்",
+          "english": "Israel",
+          "tamil": "இஸ்ரவேல்",
+          "correct": true
+        },
+        {
+          "letter": "C",
+          "text": "Moab / மோவாப்",
+          "english": "Moab",
+          "tamil": "மோவாப்",
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Judah / யூதா",
+          "english": "Judah",
+          "tamil": "யூதா",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "line": 25,
+      "section": "Chapters 5, 6",
+      "type": "true_false",
+      "time": null,
+      "text": "God Almighty would stir up a nation to oppress Israel from Lebo Hamath to the valley of the Arabah. (Amos 6:14)",
+      "tamil": null,
+      "answers": [
+        {
+          "letter": "A",
+          "text": "True",
+          "english": "True",
+          "tamil": null,
+          "correct": true
+        },
+        {
+          "letter": "B",
+          "text": "False",
+          "english": "False",
+          "tamil": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "line": 30,
+      "section": "Chapters 5, 6",
+      "type": "multiple_select",
+      "time": null,
+      "text": "What two virtues did the people turn into bitterness and poison? (Amos 5:7, 6:12)",
+      "tamil": null,
+      "answers": [
+        {
+          "letter": "A",
+          "text": "Justice",
+          "english": "Justice",
+          "tamil": null,
+          "correct": true
+        },
+        {
+          "letter": "B",
+          "text": "Righteousness",
+          "english": "Righteousness",
+          "tamil": null,
+          "correct": true
+        },
+        {
+          "letter": "C",
+          "text": "Wisdom",
+          "english": "Wisdom",
+          "tamil": null,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Peace",
+          "english": "Peace",
+          "tamil": null,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "line": 39,
+      "section": "Chapters 7, 8, 9",
+      "type": "quiz",
+      "time": null,
+      "text": "Who told Amos to get out of Israel and do his prophesying in Judah? (Amos 7:12)",
+      "tamil": null,
+      "answers": [
+        {
+          "letter": "A",
+          "text": "Amaziah",
+          "english": "Amaziah",
+          "tamil": null,
+          "correct": true
+        },
+        {
+          "letter": "B",
+          "text": "Jeroboam",
+          "english": "Jeroboam",
+          "tamil": null,
+          "correct": false
+        },
+        {
+          "letter": "C",
+          "text": "Hezekiah",
+          "english": "Hezekiah",
+          "tamil": null,
+          "correct": false
+        },
+        {
+          "letter": "D",
+          "text": "Ahab",
+          "english": "Ahab",
+          "tamil": null,
+          "correct": false
+        }
+      ]
+    }
+  ],
+  "valid": true
+}
