@@ -1,0 +1,25 @@
+{
+  "_comment": "Settings for the Igniters youth quiz pipeline. Limits mirror Kahoot's editor limits; adjust if your Kahoot plan allows more.",
+  "limits": {
+    "title_max_chars": 95,
+    "description_max_chars": 500,
+    "question_max_chars": 120,
+    "answer_max_chars": 75,
+    "min_answers": 2,
+    "max_answers": 4,
+    "max_questions": 100
+  },
+  "defaults": {
+    "time_limit_seconds": 20,
+    "points": true,
+    "bold": true,
+    "strip_references": true,
+    "language_mode": "combine_if_fits",
+    "title_prefix": "Igniters Youth Quiz"
+  },
+  "_language_modes": {
+    "combine_if_fits": "Question = English + newline + Tamil when it fits the limit, otherwise English only (warned).",
+    "english_only": "Always use the English text only.",
+    "tamil_only": "Use the Tamil text when present, else English."
+  }
+}

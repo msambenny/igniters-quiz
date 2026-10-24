@@ -1,0 +1,3 @@
+# Optional helpers. pypdf reads PDF questions; playwright prints the monthly PDF where Chrome is missing.
+pypdf>=4
+playwright>=1.40
