@@ -1,0 +1,472 @@
+{
+  "title": "Igniters Youth Quiz – Galatians & Ephesians (1 Nov 2026)",
+  "description": "Galatians 1–6 and Ephesians 1–6",
+  "language": "English",
+  "questions": [
+    {
+      "type": "content",
+      "title": "<b>Galatians 1–3</b>"
+    },
+    {
+      "type": "quiz",
+      "question": "<b>Paul received the gospel through a ___ of Jesus Christ.</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>wisdom</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>revelation</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>power</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>grace</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>While he was in Judaism, Paul was extremely zealous for ___.</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>ancestral worship</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>ancestral goals</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>ancestral traditions</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>God's law</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "true_false",
+      "question": "<b>Paul was entrusted with the gospel to the circumcised, and Peter with the gospel to the uncircumcised.</b>",
+      "correct": false,
+      "time": 20000
+    },
+    {
+      "type": "quiz",
+      "question": "<b>At Antioch, Paul opposed Peter to his face in the matter of ___.</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>proclaiming the truth of the gospel</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>leading a church in Galatia</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>eating with the Gentiles</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>circumcision of Gentiles</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>Christ redeemed us from the ___ of the Law.</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>power</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>bondage</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>curse</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>works</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>The ultimate purpose of the Law is to lead us to ___.</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Sin</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Christ</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>The Church</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Faith</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "<b>Galatians 4–6</b>"
+    },
+    {
+      "type": "quiz",
+      "question": "<b>What does God send into the hearts of those who are His children?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>The spirit of wisdom and understanding</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>The Spirit of His Son, crying \"Abba, Father\"</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>The spirit of prophecy and revelation</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>The spirit of fear and trembling</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>In Galatians 4, Paul compares the two covenants using Hagar and Sarah. What do they represent?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Slavery and the promise</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Faith and good works</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>The Gentiles and the apostles</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>The earthly kingdom and the heavenly kingdom</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>What is freedom in Christ according to Paul in his letter to the Galatians?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Freedom allows believers to satisfy every personal desire.</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Use your freedom to serve one another humbly in love.</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Freedom means believers no longer need to care about others.</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Freedom to worship God in Spirit and truth.</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>Which of the following are included in the fruit of the Spirit?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Self-control</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Humility</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Goodness</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Merciful</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>What does a person who sows to the Spirit reap?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Earthly wealth and material success</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Eternal life</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Freedom from every earthly difficulty</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Recognition and honour from people</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "<b>Ephesians 1–3</b>"
+    },
+    {
+      "type": "quiz",
+      "question": "<b>By what are we saved?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>By grace through faith</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>By works through the law</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>By human wisdom</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>By religious traditions</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>What are believers described as?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>God's handiwork</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Created in Christ Jesus</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Saved because of good works</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Created to do good works</b>",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "type": "true_false",
+      "question": "<b>Christ Himself is our peace.</b>",
+      "correct": true,
+      "time": 20000
+    },
+    {
+      "type": "quiz",
+      "question": "<b>God is able to do immeasurably more than all we ask or imagine by what power?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>The power of human determination</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>The power of the law</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>The power that is at work within us</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>The power of worldly influence</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>Through what do we have redemption and forgiveness of sins?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Our good works</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>His blood</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Our prayers</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>The Law of Moses</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "<b>Ephesians 4–6</b>"
+    },
+    {
+      "type": "quiz",
+      "question": "<b>Do not let any ___ come out of your mouths, but only what is helpful for building others up.</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Lies</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Unwholesome talk</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Bad words</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Slander</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>What should someone who has been stealing start doing?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Keep his hands clean</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Start working and share with others in need</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Repay every person immediately</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Not give the devil a foothold</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>Paul compares the relationship between husband and wife to what?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Christ and the Church</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Israel and Judah</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Godly love among disciples</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>God's love towards us</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>What is God's promise for honouring one's father and mother?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Enjoy long life on earth</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Good health and wealth</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Have a peaceful mind</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Receive many blessings from them</b>",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "question": "<b>Which sequence lists the armour of God in the order Paul gives it?</b>",
+      "time": 20000,
+      "choices": [
+        {
+          "answer": "<b>Breastplate, belt, shield, gospel shoes, helmet, sword</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Belt, breastplate, shield, helmet, gospel shoes, sword</b>",
+          "correct": false
+        },
+        {
+          "answer": "<b>Belt, breastplate, gospel shoes, shield, helmet, sword</b>",
+          "correct": true
+        },
+        {
+          "answer": "<b>Belt, breastplate, gospel shoes, helmet, shield, sword</b>",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}
