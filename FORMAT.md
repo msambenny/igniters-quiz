@@ -44,7 +44,7 @@ D) Peace
 
 | Element | Rule |
 |---|---|
-| Header | Required: `title:` and `date:` (YYYY-MM-DD). The date decides the monthly folder. Optional: `description:`, and `time:` (default seconds per question). |
+| Header | Required: `title:` and `date:` (YYYY-MM-DD). The date decides the monthly folder. Optional: `description:`, `time:` (default seconds per question), and `cover:` (Unsplash search for the Kahoot cover image). |
 | Section | A plain line such as `Chapters 3, 4`, exactly as on the sheet. `## Section name` also works for other kinds of section. |
 | Question | `<n>. <text> (Book ch:v)`. Numbers run 1, 2, 3… with no gaps. The Bible reference stays here and in the PDF; it is removed only in Kahoot. |
 | Tamil | Optional. The Tamil question goes on the line straight after the English one. Bilingual answers are written `English / Tamil`. |
@@ -68,4 +68,5 @@ The parser also accepts `A.` for answers, a ✅ on its own line under an answer,
 
 - Bible references are removed from the question text (`strip_references` in `config.json`).
 - All question, answer and section-slide text is wrapped in `<b>…</b>`, so it shows in bold (`bold` in `config.json`). Kahoot's True/False buttons use their own fixed labels.
+- Every slide and question gets an `image_query` (Unsplash search) made from its key words, and the quiz gets a `cover_image_query` (from `cover:` if set). The Kahoot connector requires them.
 - The length limits count the bold tags: 120 characters per question, 75 per answer.

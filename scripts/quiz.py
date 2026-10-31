@@ -45,6 +45,34 @@ def kahoot_text(text, strip_reference=False):
     return f"<b>{text}</b>" if DEFAULTS.get("bold") else text
 
 
+STOPWORDS = set("""a an the and or but of to in on at by for from with into onto as is are was were be been being
+has have had do does did not no nor so than that this these those there their them they his her him he she it its
+we us our you your who whom whose what which when where why how all any each every some such only own same other
+can could should would will shall may might must about after before over under again while during through up down
+out off very just also then once here according following included described compared lists order gives true false
+select correct answers answer start doing someone person people one two let come able more between chapter chapters""".split())
+SECTION_IMAGES = ("ancient scroll", "quill and ink", "old manuscript", "parchment letter", "candle and bible",
+                  "stone tablets", "oil lamp", "desert landscape")
+
+
+def image_query(*texts, words=4, seen=None):
+    """Unsplash search for a slide or question: its first few key words, unique within the quiz."""
+    keys = []
+    for text in texts:
+        for word in re.findall(r"[A-Za-z][A-Za-z'-]+", REFERENCE.sub("", text or "")):
+            word = word.strip("'-")
+            if len(word) > 2 and word.lower() not in STOPWORDS and word.lower() not in (k.lower() for k in keys):
+                keys.append(word)
+    query = " ".join(keys[:words]) or "bible"
+    if seen is not None:
+        extra = words
+        while query.lower() in seen and extra < len(keys):
+            extra += 1
+            query = " ".join(keys[:extra])
+        seen.add(query.lower())
+    return query[:100]
+
+
 # ---------------------------------------------------------------- helpers
 
 def slugify(text):
@@ -123,7 +151,7 @@ def parse(text):
         line = clean(raw)
         if not line:
             continue
-        if m := re.match(r"^(title|date|description|time)\s*:\s*(.*)$", line, re.I):
+        if m := re.match(r"^(title|date|description|time|cover)\s*:\s*(.*)$", line, re.I):
             if current is None:
                 meta[m.group(1).lower()] = m.group(2).strip()
                 continue
@@ -322,29 +350,40 @@ def cmd_build(args):
 
     # Shape matches the Kahoot! connector's create_or_update_kahoot input: time in ms,
     # true/false as {type, question, correct}, section headings as content slides.
+    # The connector requires cover_image_query and an image_query on every item.
     strip = DEFAULTS["strip_references"]
+    seen = set()
     section = None
     for q in data["questions"]:
         if args.sections and q["section"] and q["section"] != section:
             section = q["section"]
-            questions.append({"type": "content", "title": kahoot_text(section)[:120]})
+            theme = SECTION_IMAGES[sum(1 for item in questions if item["type"] == "content") % len(SECTION_IMAGES)]
+            questions.append({"type": "content", "title": kahoot_text(section)[:120],
+                              "image_query": image_query(section, theme, seen=seen)})
         english = REFERENCE.sub("", q["text"]).strip() if strip else q["text"]
         question = pick(english, q["tamil"], f"{english}\n{q['tamil']}", LIMITS["question_max_chars"], f"Q{q['number']}")
         time_ms = (q["time"] or default_time) * 1000
+        correct_text = " ".join(a["english"] for a in q["answers"] if a["correct"])
+        image = image_query(q["text"], correct_text, seen=seen)
         if q["type"] == "true_false":
             correct = next(a["english"].lower() == "true" for a in q["answers"] if a["correct"])
-            questions.append({"type": "true_false", "question": question, "correct": correct, "time": time_ms})
+            questions.append({"type": "true_false", "question": question, "correct": correct, "time": time_ms,
+                              "image_query": image})
             continue
         if q["type"] == "multiple_select":
             notes.append(f"Q{q['number']}: Kahoot has no select-all type; any one marked answer scores")
         choices = [{"answer": pick(a["english"], a["tamil"], a["text"], LIMITS["answer_max_chars"],
                                    f"Q{q['number']}{a['letter']}"),
                     "correct": a["correct"]} for a in q["answers"]]
-        questions.append({"type": "quiz", "question": question, "time": time_ms, "choices": choices})
+        questions.append({"type": "quiz", "question": question, "time": time_ms, "choices": choices,
+                          "image_query": image})
 
     description = meta.get("description") or ", ".join(data["sections"])
+    topic = meta["title"].replace(DEFAULTS["title_prefix"], "").split("(")[0]
     payload = {"title": meta["title"], "description": description[:LIMITS["description_max_chars"]],
-               "language": "தமிழ்" if mode == "tamil_only" else "English", "questions": questions}
+               "language": "தமிழ்" if mode == "tamil_only" else "English",
+               "cover_image_query": (meta.get("cover") or image_query(topic, "open bible"))[:100],
+               "questions": questions}
     (folder / "kahoot-payload.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"payload": str(folder / "kahoot-payload.json"), "questions": len(questions), "notes": notes},
                      ensure_ascii=False, indent=2))

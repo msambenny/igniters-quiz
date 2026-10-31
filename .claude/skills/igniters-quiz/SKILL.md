@@ -96,7 +96,7 @@ Ask the user to approve it.
    - Do Stage 5 anyway, so the validated quiz and payload are saved.
    - Stop there. Tell the user they can finish from the Mac, where you create the Kahoot from `kahoot-payload.json` and then run `record`.
 3. Call `create_or_update_kahoot`:
-   - Optionally add a `cover_image_query`, e.g. `ancient scroll bible reading`.
+   - Pass the payload's `cover_image_query` and each item's `image_query` through. The connector now **requires** them (without them every question fails with "Invalid input"). `build` makes them from each question's key words; you may swap a weak one for a better, distinct search, but never leave one out.
    - **Leave out `folderId`.** The user's account refuses its workspace ids ("You don't have access to the folder"). Without a folder, the quiz is saved to the user's default library, the msambenny workspace. Pass a `folderId` only if the user asks for a specific folder.
    - To update an existing quiz, pass `uuid` from `kahoot.json` along with the **full** payload. Updates replace the whole quiz.
    - Don't create a duplicate.
