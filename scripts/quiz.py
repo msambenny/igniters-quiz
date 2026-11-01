@@ -371,7 +371,8 @@ def cmd_build(args):
                               "image_query": image})
             continue
         if q["type"] == "multiple_select":
-            notes.append(f"Q{q['number']}: Kahoot has no select-all type; any one marked answer scores")
+            notes.append(f"Q{q['number']}: switch to Multi-select in the Kahoot editor after creating "
+                         "(the connector can only make single-select, where any one marked answer scores)")
         choices = [{"answer": pick(a["english"], a["tamil"], a["text"], LIMITS["answer_max_chars"],
                                    f"Q{q['number']}{a['letter']}"),
                     "correct": a["correct"]} for a in q["answers"]]
@@ -393,9 +394,12 @@ def cmd_build(args):
 
 def cmd_record(args):
     folder = quiz_dir(args.folder)
-    meta = json.loads((folder / "quiz.json").read_text(encoding="utf-8"))["meta"]
+    data = json.loads((folder / "quiz.json").read_text(encoding="utf-8"))
+    meta = data["meta"]
     result = {"kahoot_id": args.kahoot_id, "url": args.url, "workspace": args.workspace,
-              "created": dt.datetime.now().isoformat(timespec="seconds"), "title": meta.get("title")}
+              "created": dt.datetime.now().isoformat(timespec="seconds"), "title": meta.get("title"),
+              # Set to Multi-select by hand in the Kahoot editor; a connector update turns them back to single-select.
+              "multi_select_in_editor": [q["number"] for q in data["questions"] if q["type"] == "multiple_select"]}
     (folder / "kahoot.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
     index = folder.parent / "index.md"

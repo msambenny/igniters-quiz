@@ -88,7 +88,7 @@ Ask the user to approve it.
    - Normal question: `{type:"quiz", question, time, choices:[{answer, correct}]}`. `time` is in milliseconds.
    - True/False question: `{type:"true_false", question, correct:true|false, time}`.
    - Section heading: `{type:"content", title}`.
-   - Kahoot has no "select all" type. A `[multi]` question becomes a quiz question with several correct answers, and a player scores by picking any one of them. Tell the user this happens.
+   - The connector can't make Kahoot's **Multi-select** question type. A `[multi]` question is sent as a quiz question with every correct answer marked, which Kahoot plays as single-select (any one correct answer scores). After creating, tell the user to open each such question in the Kahoot editor and switch it from **Single select** to **Multi-select**; the correct answers are already ticked. `build`'s notes and `kahoot.json` (`multi_select_in_editor`) list the question numbers.
 2. Check that the Kahoot connector is available. Its tools are `create_or_update_kahoot`, `get_workspaces`, `get_kahoot`, `get_kahoot_editor_url` and `preview_kahoot`, with a server prefix like `mcp__<uuid>__`. If they're missing, load them with ToolSearch (`kahoot`).
 
    If the tools still aren't there:
@@ -98,7 +98,7 @@ Ask the user to approve it.
 3. Call `create_or_update_kahoot`:
    - Pass the payload's `cover_image_query` and each item's `image_query` through. The connector now **requires** them (without them every question fails with "Invalid input"). `build` makes them from each question's key words; you may swap a weak one for a better, distinct search, but never leave one out.
    - **Leave out `folderId`.** The user's account refuses its workspace ids ("You don't have access to the folder"). Without a folder, the quiz is saved to the user's default library, the msambenny workspace. Pass a `folderId` only if the user asks for a specific folder.
-   - To update an existing quiz, pass `uuid` from `kahoot.json` along with the **full** payload. Updates replace the whole quiz.
+   - To update an existing quiz, pass `uuid` from `kahoot.json` along with the **full** payload. Updates replace the whole quiz, including any edits made in the Kahoot editor: the Multi-select switches go back to single-select. Before updating, ask the user whether they edited the quiz in Kahoot, and afterwards remind them to switch the `multi_select_in_editor` questions again. `get_kahoot` fails on a quiz that has Multi-select questions, because the connector doesn't know that type; that's expected.
    - Don't create a duplicate.
    - Don't call `preview_kahoot` as well; create already shows a preview.
    - Kahoot shuffles the answer order itself. That's expected and the correct flags are kept.
@@ -129,7 +129,7 @@ Give the user:
 - the Kahoot link
 - the number of questions
 - the folder path and the path of the month's PDF
-- anything that still needs a person, such as warnings, dropped Tamil, or questions you shortened
+- anything that still needs a person, such as warnings, dropped Tamil, questions you shortened, or questions to switch to Multi-select in the Kahoot editor
 
 ## Monthly folder layout
 
